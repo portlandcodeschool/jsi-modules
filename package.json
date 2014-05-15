@@ -3,13 +3,12 @@
   "version": "0.1.0",
   "description": "Proof of concept for jsi modules work",
   "main": "index.js",
-  "dependencies": {
-    "chai": "^1.9.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "coveralls": "^2.10.0",
     "istanbul": "^0.2.9",
-    "mocha": "^1.18.2"
+    "mocha": "^1.18.2",
+    "chai": "^1.9.1"
   },
   "scripts": {
     "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report $(if [ \"$TRAVIS\" ]; then echo lcovonly; else echo html; fi) -- && if [ \"$TRAVIS\" ]; then cat ./coverage/lcov.info | ./node_modules/.bin/coveralls; fi"

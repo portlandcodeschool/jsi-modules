@@ -5,7 +5,7 @@ module.exports.map = function(array, fn) {
       mapVal[n] = fn(array[n]);
       rollAlong(array, n+1, fn);
     }
-  }
+  };
   rollAlong(array, 0, fn);
   return mapVal;
 };

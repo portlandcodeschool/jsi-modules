@@ -4,11 +4,11 @@ var _ = require('../index');
 
 var twoTimes = function(n) {
 	return n * 2;
-}
+};
 
 var pluralize = function(wurd) {
 	return wurd + "s";
-}
+};
 
 describe('_.map()', function() {
 
@@ -24,5 +24,5 @@ describe('_.map()', function() {
 		'the function {add an s}', function() {
 			expect(_.map(["pod", "pond", "rattle", "snake"], pluralize)).to.
 			eql(["pods", "ponds", "rattles", "snakes"]);
-		})
-})
+		});
+});

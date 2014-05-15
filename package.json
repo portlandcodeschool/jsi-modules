@@ -4,7 +4,7 @@
   "description": "Modules challenge",
   "main": "index.js",
   "scripts": {
-    "test": "`npm bin`/mocha .globals.js index.js"
+    "test": "`npm bin`/mocha"
   },
   "repository": {
     "type": "git",

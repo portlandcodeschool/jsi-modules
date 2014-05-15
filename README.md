@@ -1,8 +1,17 @@
 # Modules Challenge
 
-> This repository is for learning purposes. It may intentionally contain bugs or
-fail to function properly. The code may be purposefully difficult to read,
-contain syntax errors, or only be a partial solution. You should not base code
-off of this and absolutely should not use it in production.
+Implements a map function that recieves and array and function and returns a new array with the function applied to each element.
 
-Write a `map` function.
+##Usage
+Require the module and invoke the map function.  Example usage:
+```JavaScript
+var result = _.map(['orange', 'apple', 'banana'], function(element){
+  return element + 's';
+});
+
+//Result is set to ['oranges', 'apples', 'bananas']
+```
+
+##License
+Distributed under the MIT license.  See LICENSE file.
+

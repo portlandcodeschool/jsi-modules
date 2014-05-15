@@ -1,21 +1,30 @@
 {
   "name": "jsi-modules",
   "version": "0.1.0",
-  "description": "Modules challenge",
+  "description": "Proof of concept for jsi modules work",
   "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "coveralls": "^2.10.0",
+    "istanbul": "^0.2.9",
+    "mocha": "^1.18.2",
+    "chai": "^1.9.1",
+    "jshint": "~2.4.4"
+  },
   "scripts": {
-    "test": "`npm bin`/mocha"
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report $(if [ \"$TRAVIS\" ]; then echo lcovonly; else echo html; fi) -- && if [ \"$TRAVIS\" ]; then cat ./coverage/lcov.info | ./node_modules/.bin/coveralls; fi"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/portlandcodeschool/jsi-modules.git"
+    "url": "https://github.com/portlandcodeschool/jsi-modules.git"
   },
-  "author": "Whitney Young",
+  "keywords": [
+    "modules"
+  ],
+  "author": "Adam Horak",
   "license": "MIT",
-  "devDependencies": {
-    "mocha": "~1.18.2",
-    "jshint": "~2.4.4",
-    "chai": "~1.9.1"
+  "bugs": {
+    "url": "https://github.com/portlandcodeschool/jsi-modules/issues"
   },
-  "dependencies": {}
+  "homepage": "https://github.com/portlandcodeschool/jsi-modules"
 }

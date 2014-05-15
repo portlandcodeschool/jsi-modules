@@ -1,3 +1,11 @@
 module.exports.map = function(array, fn) {
-	return [fn(array[0]), fn(array[1]), fn(array[2])];
+	var updateArray = function(array, fn, n) {
+		if(n < array.length) {
+			array[n] = fn(array[n]);
+			n = n + 1;
+			updateArray(array, fn, n);
+		}
+	};
+	updateArray(array, fn, 0);
+	return array;
 };

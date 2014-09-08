@@ -1,17 +1,3 @@
-var each = function(inputArray, fn) {
-  var next = function(inputArray, n, fn) {
-    if(inputArray[n] !== undefined) {
-      fn(inputArray[n]);
-      next(inputArray, n+1, fn);
-    }
-  };
-
-  if(inputArray.length > 0) {
-    fn(inputArray[0]);
-    next(inputArray, 1, fn);
-  }
-};
-
 
 /**
  * Create a new array by applying `fn` to each element in `array`
@@ -40,11 +26,4 @@ var each = function(inputArray, fn) {
  *
  */
 module.exports.map = function(arr, fn) {
-  var newArray = [];
-
-  each(arr, function(element) {
-    newArray.push(fn(element));
-  });
-
-  return(newArray);
 };

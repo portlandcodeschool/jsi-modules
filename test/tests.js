@@ -1,6 +1,6 @@
 var chai = require('chai');
 var expect = chai.expect;
-var _ = require('..');
+var arrayFunctions = require('..');
 
 describe('map()', function() {
 });
